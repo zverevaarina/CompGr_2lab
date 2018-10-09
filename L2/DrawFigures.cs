@@ -187,18 +187,18 @@ namespace L2
             //кординаты начала сектора
             int xs= Math.Abs((int)(r * Math.Cos((sAngle * (Math.PI / 180)))));
             int ys= Math.Abs((int)(r * Math.Sin((sAngle * (Math.PI / 180)))));
-            if (sAngle < 90) DrawLine(bmp, Color.Red, x, y, x + xs, y - ys);
-            else if (sAngle >= 90 && sAngle < 180) DrawLine(bmp, Color.Red, x, y, x - xs, y - ys);
-            else if (sAngle >= 180 && sAngle < 270) DrawLine(bmp, Color.Red, x, y, x - xs, y + ys);
-            else if (sAngle >= 270) DrawLine(bmp, Color.Red, x, y, x + xs, y + ys);
+            if (sAngle < 90) DrawLine(bmp, Color.Black, x, y, x + xs, y - ys);
+            else if (sAngle >= 90 && sAngle < 180) DrawLine(bmp, Color.Black, x, y, x - xs, y - ys);
+            else if (sAngle >= 180 && sAngle < 270) DrawLine(bmp, Color.Black, x, y, x - xs, y + ys);
+            else if (sAngle >= 270) DrawLine(bmp, Color.Black, x, y, x + xs, y + ys);
 
             //координаты конца сектора
             int xf = Math.Abs((int)(r * Math.Cos((fAngle * (Math.PI / 180)))));
             int yf = Math.Abs((int)(r * Math.Sin((fAngle * (Math.PI / 180)))));
-            if (fAngle < 90) DrawLine(bmp, Color.Red, x, y, x + xf, y - yf);
-            else if (fAngle >= 90 && fAngle < 180) DrawLine(bmp, Color.Red, x, y, x - xf, y - yf);
-            else if (fAngle >= 180 && fAngle < 270) DrawLine(bmp, Color.Red, x, y, x - xf, y + yf);
-            else if (fAngle >= 270) DrawLine(bmp, Color.Red, x, y, x + xf, y + yf);
+            if (fAngle < 90) DrawLine(bmp, Color.Black, x, y, x + xf, y - yf);
+            else if (fAngle >= 90 && fAngle < 180) DrawLine(bmp, Color.Black, x, y, x - xf, y - yf);
+            else if (fAngle >= 180 && fAngle < 270) DrawLine(bmp, Color.Black, x, y, x - xf, y + yf);
+            else if (fAngle >= 270) DrawLine(bmp, Color.Black, x, y, x + xf, y + yf);
         }
 
         public static void DrawAll(Bitmap bmp, int x, int y, int r, int sAngle, int fAngle, int k, int max, int _x, int _y, int d)
